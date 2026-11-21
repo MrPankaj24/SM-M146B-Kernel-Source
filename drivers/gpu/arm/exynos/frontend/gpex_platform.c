@@ -1,4 +1,4 @@
-/* SPDX-License-Identifier: GPL-2.0 */
+\/* SPDX-License-Identifier: GPL-2.0 */
 
 /*
  * (C) COPYRIGHT 2021 Samsung Electronics Inc. All rights reserved.
@@ -94,7 +94,7 @@ int gpex_platform_init(struct device **dev)
 	return 0;
 }
 
-void gpex_platform_term()
+void gpex_platform_term(void)
 {
 	runtime_test_runner_term();
 
