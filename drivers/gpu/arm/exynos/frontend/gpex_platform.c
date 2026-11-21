@@ -1,4 +1,4 @@
-\/* SPDX-License-Identifier: GPL-2.0 */
+/* SPDX-License-Identifier: GPL-2.0 */
 
 /*
  * (C) COPYRIGHT 2021 Samsung Electronics Inc. All rights reserved.
