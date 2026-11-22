@@ -2047,7 +2047,8 @@ static void simulate_UBSAN_OOB_PTR(char **argv, int argc)
 	do_test_out_of_bound_pointer(TEST_OOB_ARRAY_SIZE + 1);
 }
 
-static void secdbg_fpsimd_save_state(struct user_fpsimd_state *state)
+static void __attribute__((target("+fp-armv8,+neon")))
+secdbg_fpsimd_save_state(struct user_fpsimd_state *state)
 {
 	asm volatile(
 	"	stp	q0, q1, [%0, #16 * 0]	\n"
@@ -2071,7 +2072,8 @@ static void secdbg_fpsimd_save_state(struct user_fpsimd_state *state)
 	: "cc", "memory");
 }
 
-static void secdbg_fpsimd_load_state(struct user_fpsimd_state *state)
+static void __attribute__((target("+fp-armv8,+neon")))
+secdbg_fpsimd_load_state(struct user_fpsimd_state *state)
 {
 	asm volatile(
 	"	ldp	q0, q1, [%0, #16 * 0]	\n"
