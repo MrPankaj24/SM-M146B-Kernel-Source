@@ -761,7 +761,7 @@ int profiler_set_weight_table_idx_1(unsigned int value)
 	return 0;
 }
 
-static int sgpu_profiler_rtp_init()
+static int sgpu_profiler_rtp_init(void)
 {
 	int i = 0;
 	rtp.readout = 0;
@@ -785,7 +785,7 @@ static int sgpu_profiler_rtp_init()
 	return 0;
 }
 
-static int sgpu_profiler_pid_init()
+static int sgpu_profiler_pid_init(void)
 {
 	pid.list_readout = 0;
 	pid.list_top = 0;
