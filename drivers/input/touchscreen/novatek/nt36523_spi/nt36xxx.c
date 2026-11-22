@@ -1,4 +1,4 @@
-/*
+////*
  * Copyright (C) 2010 - 2018 Novatek, Inc.
  *
  * $Revision: 61426 $
@@ -419,7 +419,7 @@ static inline int32_t spi_read_write(struct spi_device *client, uint8_t *buf, si
 	};
 	int ret;
 
-#if IS_ENABLED(CONFIG_SAMSUNG_TUI)
+#if IS_ENABLED(CONFIG_SAMSUNG_TUI) && IS_ENABLED(CONFIG_TRUSTONIC_TRUSTED_UI)
 	if (STUI_MODE_TOUCH_SEC & stui_get_mode())
 		return -EBUSY;
 #endif
