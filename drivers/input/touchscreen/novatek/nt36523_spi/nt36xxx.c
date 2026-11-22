@@ -404,6 +404,12 @@ static int nvt_stui_tsp_type(void)
 }
 #endif
 
+
+int __attribute__((weak)) stui_get_mode(void)
+{
+	return 0;
+}
+
 /*******************************************************
 Description:
 	Novatek touchscreen spi read/write core function.
