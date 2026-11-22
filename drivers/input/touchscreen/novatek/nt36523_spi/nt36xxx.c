@@ -1,4 +1,4 @@
-////*
+/*
  * Copyright (C) 2010 - 2018 Novatek, Inc.
  *
  * $Revision: 61426 $
