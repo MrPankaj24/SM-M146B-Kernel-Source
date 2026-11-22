@@ -227,7 +227,7 @@ static int close_driver(ClosePeripheral_cmd_t *cmd)
 	return 0;
 }
 
-static void reboot_phone()
+static void reboot_phone(void)
 {
 	/**
 	 *	kernel_restart - reboot the system

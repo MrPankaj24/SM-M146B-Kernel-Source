@@ -21,7 +21,7 @@
 static u8 emul_reg[1024*20] = {0};
 static bool init_reg = false;
 
-static void i3c_init()
+static void i3c_init(void)
 {
 	if (init_reg == false) {
 		memset(emul_reg, 0x1, sizeof(emul_reg));
